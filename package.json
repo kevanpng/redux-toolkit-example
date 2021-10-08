@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
+    "antd": "^4.16.13",
+    "antd-pro": "^0.7.0",
     "cra-template-redux-typescript": "1.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
