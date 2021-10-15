@@ -2,12 +2,18 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import { AntdForm } from './features/antdForm/AntdForm';
+import {AntdTable} from "./features/antdTable/AntdTable";
 
 function App() {
   return (
-    <div className="App">
+      <>
+        <AntdTable />
+
+      <AntdForm />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+
         <Counter />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -51,7 +57,7 @@ function App() {
           </a>
         </span>
       </header>
-    </div>
+    </>
   );
 }
 

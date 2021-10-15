@@ -37,3 +37,7 @@
     transform: translateY(0px);
   }
 }
+
+/*This is the part that is needed for antd components to work*/
+@import '~antd/dist/antd.css';
+
