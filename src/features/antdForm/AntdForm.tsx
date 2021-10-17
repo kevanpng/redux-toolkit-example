@@ -13,17 +13,24 @@ import {
 import styles from './Counter.module.css';
 import { Form, Input, Button, Checkbox } from 'antd';
 import {incrementAsync} from "../counter/counterSlice";
+import { useHistory } from 'react-router-dom';
 
 
 export const AntdForm = () => {
     const dispatch = useAppDispatch();
+    const history = useHistory();
 
+        
     const onFinish = (values: any) => {
         console.log('Success:', values);
         // for sync
         // dispatch(changeName(values))
-        // TODO this is not working
         dispatch((changeNameAsync(values)))
+
+        // TODO add history object itno the payload of the action
+        // dispatch((changeNameAsync(values)))
+        
+        
     };
 
     const onFinishFailed = (errorInfo: any) => {
