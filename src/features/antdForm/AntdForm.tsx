@@ -8,9 +8,11 @@ import {
     // incrementAsync,
     // incrementIfOdd,
     selectName,
+    changeNameAsync
 } from './formSlice';
 import styles from './Counter.module.css';
 import { Form, Input, Button, Checkbox } from 'antd';
+import {incrementAsync} from "../counter/counterSlice";
 
 
 export const AntdForm = () => {
@@ -18,7 +20,10 @@ export const AntdForm = () => {
 
     const onFinish = (values: any) => {
         console.log('Success:', values);
-        dispatch(changeName(values))
+        // for sync
+        // dispatch(changeName(values))
+        // TODO this is not working
+        dispatch((changeNameAsync(values)))
     };
 
     const onFinishFailed = (errorInfo: any) => {

@@ -3,12 +3,12 @@ import counterReducer from '../features/counter/counterSlice';
 import userReducer from '../features/antdForm/formSlice';
 
 export const store = configureStore({
-  reducer: {
-    counter: counterReducer,
-    // add more reducers here
-    // users: usersReducer,
-    users: userReducer,
-  },
+    reducer: {
+        counter: counterReducer,
+        // add more reducers here
+        // users: usersReducer,
+        users: userReducer,
+    },
 });
 
 export type AppDispatch = typeof store.dispatch;

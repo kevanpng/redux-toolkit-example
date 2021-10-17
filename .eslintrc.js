@@ -3,9 +3,10 @@ module.exports = {
         node: true,
         browser: true,
     },
-    extends: ["eslint:recommended", "plugin:react/recommended"],
+    extends: ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
     globals: {},
-    parser: "babel-eslint",
+    parser: "@typescript-eslint/parser",
+
     parserOptions: {
         ecmaFeatures: {
             jsx: true,
@@ -13,10 +14,13 @@ module.exports = {
         ecmaVersion: 12,
         sourceType: "module",
     },
-    plugins: ["react", "import", "react-hooks"],
+    plugins: ["react", "import", "react-hooks", "@typescript-eslint"],
     ignorePatterns: ["node_modules/"],
     rules: {
-        "indent": ["warn", 4]
+        indent: ["warn", 4],
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
+
     },
     settings: {
         react: {
