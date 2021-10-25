@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
-import { AntdForm } from './features/antdForm/AntdForm';
+import { AntdForm } from './features/antdForm/components/AntdForm';
 import {AntdTable} from "./features/antdTable/AntdTable";
 
 function App() {

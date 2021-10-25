@@ -1,7 +1,7 @@
 import { Table, Tag, Space } from 'antd';
 import {useAppSelector} from "../../app/hooks";
 import {selectCount} from "../counter/counterSlice";
-import {selectName} from "../antdForm/formSlice";
+import {selectName} from "../antdForm/selectors";
 
 const columns = [
     {

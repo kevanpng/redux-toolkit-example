@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { useAppSelector, useAppDispatch } from '../../../app/hooks';
 import {
     // decrement,
     changeName,
     // incrementByAmount,
     // incrementAsync,
     // incrementIfOdd,
-    selectName,
-    changeNameAsync
-} from './formSlice';
+
+} from '../formSlice';
 import styles from './Counter.module.css';
 import { Form, Input, Button, Checkbox } from 'antd';
-import {incrementAsync} from "../counter/counterSlice";
+import {incrementAsync} from "../../counter/counterSlice";
+import {selectName} from "../selectors";
 // import { useHistory } from 'react-router-dom';
 
 
@@ -20,12 +20,11 @@ export const AntdForm = () => {
     const dispatch = useAppDispatch();
     // const history = useHistory();
 
-        
     const onFinish = (values: any) => {
         console.log('Success:', values);
         // for sync
-        // dispatch(changeName(values))
-        dispatch((changeNameAsync(values)))
+        dispatch(changeName(values))
+        // dispatch((changeNameAsync(values)))
 
         // TODO add history object itno the payload of the action
         // dispatch((changeNameAsync(values)))

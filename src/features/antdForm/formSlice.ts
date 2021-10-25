@@ -1,16 +1,11 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState, AppThunk } from '../../app/store';
-import { fetchName } from './counterAPI';
+import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {fetchName} from './counterAPI';
+import {FormState} from "./models";
 //
 // export interface CounterState {
 //   value: number;
 //   status: 'idle' | 'loading' | 'failed';
 // }
-
-export interface FormState {
-  name: string,
-  status: string
-}
 
 const initialState: FormState = {
     name: "firstname",
@@ -78,17 +73,6 @@ export const FormSlice = createSlice({
 
 // export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 export const { changeName } = FormSlice.actions;
-
-// The function below is called a selector and allows us to select a value from
-// the state. Selectors can also be defined inline where they're used instead of
-// in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
-export const selectName = (state: RootState) => {
-    return [
-        {
-            name:state.users.name   
-        }
-    ]
-}
 
 // We can also write thunks by hand, which may contain both sync and async logic.
 // Here's an example of conditionally dispatching actions based on current state.
