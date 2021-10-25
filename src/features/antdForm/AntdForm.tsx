@@ -13,12 +13,12 @@ import {
 import styles from './Counter.module.css';
 import { Form, Input, Button, Checkbox } from 'antd';
 import {incrementAsync} from "../counter/counterSlice";
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 
 
 export const AntdForm = () => {
     const dispatch = useAppDispatch();
-    const history = useHistory();
+    // const history = useHistory();
 
         
     const onFinish = (values: any) => {
